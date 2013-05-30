@@ -1,0 +1,60 @@
+<!--@subject Bienvenido, {{var customer.name}}! @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"skin url=\"images/logo_email.gif\" _area='frontend'":"Email Logo Image",
+"htmlescape var=$customer.name":"Customer Name",
+"store url=\"customer/account/\"":"Customer Account Url",
+"var customer.email":"Customer Email",
+"htmlescape var=$customer.password":"Customer Password"}
+@-->
+
+<!--@styles
+body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
+@-->
+
+<div style="font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;">
+    <table cellspacing="0" cellpadding="0" border="0" width="98%" style="margin-top:10px; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; margin-bottom:10px;">
+        <tr>
+            <td align="center" valign="top">
+                <!-- [ header starts here] -->
+                <table cellspacing="0" cellpadding="0" border="0" width="650">
+                    <tr>
+                        <td valign="top">
+                            <a href="{{store url=""}}"><img src="{{skin url="images/logo_email.png" _area='frontend'}}" alt="{{var store.getFrontendName()}}"  style="margin-bottom:10px;" border="0"/></a></td>
+                    </tr>
+                </table>
+
+                <!-- [ middle starts here] -->
+                <table cellspacing="0" cellpadding="0" border="0" width="650">
+                    <tr>
+                        <td valign="top">
+                            <p><strong>Estimado {{htmlescape var=$customer.name}}</strong>,<br/>
+                            Bienvenido a {{var store.getFrontendName()}}. Para acceder cuando visite nuestra web, simplemente clique en<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;"> Acceder </a> o <a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">Mi Cuenta</a> en la parte superior de cada pagina y posteriormente escriba su e-mail y contrase&ntilde;a.</p>
+
+                            <p style="border:1px solid #BEBCB7; padding:13px 18px; background:#F8F7F5; ">
+                                Utilice los siguientes valores para acceder:<br/>
+                                E-mail: {{var customer.email}}<br/>
+                                Contrase&ntilde;a: {{htmlescape var=$customer.password}}<p>
+
+                            <p>Cuando acceda a su cuenta, usted podr&aacute; realizar las siguientes funciones:</p>
+
+                            <ul>
+                                <li>Realizar pedidos m&aacute;s rapidamente</li>
+                                <li>Comprobar el estado de sus pedidos</li>
+                                <li>Consultar el hist&oacute;rico de pedidos</li>
+                                <li>Realizar cambios en la informaci&oacute;n de su cuenta</li>
+                                <li>Cambiar su contrase&ntilde;a</li>
+                            </ul>
+
+                            <p>Si tiene alguna pregunta sobre su cuenta o cualquier otro asunto, por favor h&aacute;ganoslo saber a <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> o por tel&eacute;fono al {{config path='general/store_information/phone'}}.</p>
+                            <p>Gracias!</p>
+
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</div>
