@@ -338,7 +338,7 @@
 "Telephone","Teléfono"
 "Text","Texto"
 "Text One Line","Una línea de texto"
-"Thank you for registering with %s","Gracias por registrarse con %s"
+"Thank you for registering with %s.","Gracias por registrarse con %s."
 "The address does not belong to this customer","La dirección no pertenece a este cliente"
 "The address was successfully deleted","La dirección se ha eliminado"
 "The address was successfully saved","La dirección se ha guardado"
@@ -416,3 +416,4 @@
 "You are now logged out","Cerraste sesion"
 "You have logged out and will be redirected to our homepage in 5 seconds.","Seras redireccionado a la pagina de inicio en 5 segundos."
 "If there is an account associated with %s you will receive an email with a link to reset your password.","Si hay una cuenta asociada a %s, en breve recibiras un correo con los pasos necesarios para recuperar tu contraseña."
+"Please wait for your account to be activated","Por favor espere hasta que tu cuenta sea activada por un administrador"
